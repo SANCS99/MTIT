@@ -1,0 +1,32 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5071"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/gateway/foodorder",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/foodorder",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5176
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/foodorder/{Id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/foodorder/{Id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5176
+        }
+      ]
+    }
+
+  ]
+}
